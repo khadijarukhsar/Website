@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>{{AUTHOR_NAME}} - Writing 04</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 04 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 04</span>
+                </div>
+                
+                <div class="writing-content">
+Walking on the road of life, I often stumble and fall.
+
+I hear incomprehensible voices and try to see if someone is there talking to me.
+
+I encounter some thick smoky shadows luring me into the depths.
+
+I see ghosts trying to possess me, but I don’t recognize them.
+
+However, they appeal to me on every stance. Ghosts of memories, people and my lost selves.
+
+They are stopping me from moving forward.
+
+My racing heart and on-edge sensations won’t let me rest in peace.
+
+I want to grow but the roots have become weakened with agonies.
+
+My feet feel drenched in the ground and the only way I can keep going is by crawling on my knees.
+
+My knees hurt too and have many bruises.
+
+The shades of blue and purple, the shades of death.
+
+I look back and it’s foggy, blocking my view and filling my lungs.
+
+I look forward and see a hollow ground.
+
+But this ground is separated by a transparent wall.
+
+I can touch it like a smart phone and scroll left and right to change what’s ahead of me.
+
+Sometimes it’s bloomy and sometimes it’s blank.
+
+I see shades of rainbow becoming white light and then vanishing in strong thunder strikes.
+
+My hands are tired now and I’m still on my knees.
+
+I want to rest my head against this wall and sleep.
+
+And when I sleep I demand from everyone, please don’t come across this wall otherwise I might puke.
+
+Your voice may reach me but I won’t be able to see you, and your footprints, they would haunt me.
+
+So please for my peace, let me sleep.
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

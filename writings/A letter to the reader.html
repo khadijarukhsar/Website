@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <script>
+        if (localStorage.getItem('site-theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+    <title>{{AUTHOR_NAME}} - Writing 01</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 01 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 01</span>
+                </div>
+                
+                <div class="writing-content">
+For my entries and future confessions, there are some rules by which to judge me and you must abide by them.
+
+I have a terrible memory.
+
+Life seems unfair when you can't even recall what you were thinking the day before, and the day before, and the day before
+
+Some people say it's a fortune that I don't have to hold on to memories and don't feel lost in nostalgia.
+
+But they equate forgetting with resetting.
+
+Memories don't take the feelings with them, they don't take away the sensations and suffering with them.
+
+Imagine someone feeling depressed, but who doesn't know the cause of it.
+
+You might think that he is in a better position that he can't recall anything. But is he?
+
+He feels hollow and confused.
+
+He knows something is wrong, but can't pinpoint exactly what it is.
+
+And if by any chance he becomes fed up with this feeling, he'll deny it as it shouldn't exist.
+
+A part of him will feel seen by those feelings and a part of him will try to call it nonsense, not-again, drama or something else.
+
+I have lost a lot that I should have remembered.
+
+This feeling of grief and this yearning to mourn, they both tell me that something crucial is gone.
+
+Maybe fate snatched it from my memory and gave it to someone else.
+
+Maybe someone else will see it in a dream and think that it doesn't belong to him.
+
+So if this has happened to you, consider telling me about it; maybe it's mine.
+
+I need it.
+
+And in return, I'll give you what I've experienced, I won't say it doesn't belong to me because it does. But I'll share this with you too, you can have it, you can experience it, you can mourn on it or celebrate it.
+
+And don't worry, even if you're not ready to claim it, I'll hold it for you. You can come again and again to experience it, and I'll be happy to give it to you every time hoping that maybe you brought something for me too.
+
+And if a question arises in your mind of why I lost those memories; I could have saved them, written them somewhere or given them to someone else so that they can hold them for me. I'm looking for the answer too.
+
+I won't tell anyone if you say you want to claim any of it, but here's a condition.
+
+I want something else, too.
+
+And I want you to mourn for me, just a little, please.
+
+Just let it bring what it brings, save it for me, it's mine. Save it with colours and words.
+
+Let it settle. Let it rest. It might bring some peace within you. And some for me too.
+
+Yours Sincerely,
+
+Khadija Rukhsar
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

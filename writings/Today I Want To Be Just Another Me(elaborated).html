@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>{{AUTHOR_NAME}} - Writing 19</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 19 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 19</span>
+                </div>
+                
+                <div class="writing-content">
+Oh concealer, please conceal these spots,  
+I want to make my skin even-toned.  
+Let me forget some people and crazy plots,  
+Some laughter cried, and some misery moaned.  
+Today, I’m going to hide what I seek pride in.  
+All sorrows today will be thrown in the bin.  
+I want to dance today to celebrate every tragedy.  
+Give me some tequila, please bring me some gin.  
+Keep distant this sadness, today’s not its day.
+I want to swim in cold today or sit on the bay. 
+Hush and keep these feelings in that hidden box. 
+Look, I am today the sail and the cox. 
+They can’t drive me, or make me sick. 
+Let’s get rid of this constant ick. 
+Today is different, please let it be. 
+Today I want to be just another me.
+I enjoyed writing this last year, but now is the time to do some serious but interesting work. Let's look at what's happening here. 
+It's a defense against a constant state of being miserable and finally getting bored of it and trying to feel something fresh. In psychology terms, we use the terms defense mechanisms to explain our coping with such things. 
+So: Defense mechanisms are strategies, psychological strategies, that we use to protect ourselves from anxiety. 
+This term was introduced by Sigmund Freud, the father of psychoanalysis, and expanded by his daughter Anna. 
+If you're wondering about what kind of anxiety I'm talking about, for now you just need to know that according to Freud, we have different aspects of personality. Some aspects are opposing in nature and there's a particular aspect that keeps these opposing aspects in check. When this supervisor struggles to do its work, anxiety is created. And to cope with anxiety we use various strategies. (Basically, mostly our subconscious does.) 
+These strategies are what we call defense mechanisms. 
+Two types of defense mechanisms can be discussed here and you have to guess which one is manifested the poem:
+Denial: The person denies, ignores or refuses to accept the existence of something to protect himself from stressful and overwhelming situations. 
+Compartmentalization: In this strategy, the individual separates the conflicting thoughts. He makes abstract compartments for opposing emotions and experiences, and isolates everything that's causing any anxiety. 
+In this way, he learns to cope with cognitive dissonance. 
+So you guessed which one was portrayed in this poem? 
+Hints: hidden box, thrown in the bin, today's not its day. 
+I talked about turning my misery into a dance. In psychology, we use a term Cognitive Reframing. It's the process of changing how we look at a certain situation or feel about a certain person. This change yields reduced emotional impact of that scenario or person, leading to getting out of the limitations that our mind had decided for us. Looking at situations and people from new perspectives leads to healing. If you want to know how Cognitive Reframing is done, get along. I'll write about it soon. 
+For a more interesting and creative analysis of the human psyche from a psychological, sociological or philosophical perspective, give me a chance. There's much more to come. ❤
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

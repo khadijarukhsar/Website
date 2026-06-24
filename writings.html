@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <script>
+        if (localStorage.getItem('site-theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+    <title>{{AUTHOR_NAME}} - Writings</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <h2 class="section-title">All Writings</h2>
+            
+            <ul class="writing-list" id="full-writing-list">
+                <!-- Javascript will populate the 20 items to keep HTML clean or we hardcode them -->
+            </ul>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/writings-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

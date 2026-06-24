@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>{{AUTHOR_NAME}} - Writing 10</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 10 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 10</span>
+                </div>
+                
+                <div class="writing-content">
+I have heard and read hundreds of stories.
+Where the narrators claim that knowing too much,
+being too self-aware,
+has destroyed them.
+
+I disagree.
+At so many levels.
+
+And the fun part is one of those narratives used to be my own.
+
+I was suffering and trapped.
+Even before I knew what was happening.
+
+Knowing about it did not initiate it.
+
+It existed anyway.
+
+If knowing too much is making you overwhelmed, it just means you know very little.
+
+Or maybe you have skipped the important foundational parts.
+
+Maybe first learn how to handle your concept of self.
+
+Before exploring its hidden aspects.
+
+Maybe first learn what is the nature of self or knowing.
+
+Yes, it is the philosophical part.
+
+The one that is often seen as a waste of time.
+
+Claiming something has destroyed or trapped us,
+
+limits us from being free souls.
+
+That are ever-evolving.
+
+To someone who has been put in a box.
+
+I refuse to claim that my self is an idea or identity,
+
+that can be put inside a box.
+
+With a specific label on it.
+
+At least in this world.
+
+Yes, I get it. People form such beliefs to have a catharsis.
+
+To make a sense of their knowing and still suffering.
+
+And this is where the problem lies.
+
+Knowing about something does not mean that you have conquered it.
+
+You have just acknowledged its existence.
+
+Yes.
+
+A crucial step.
+
+But it is only a basic one.
+
+The start of the journey.
+
+So why expect the rewards and destination,
+
+when you have only just started the journey?
+
+I get it that we humans need some moments to mourn.
+
+And the journey is never a linear one.
+
+There are the moments when our emotions consume us completely.
+
+Any logic, any solution, loses its value.
+
+But I have seen people (and myself) just get stuck here.
+
+As if, it's the destination.
+
+Something to be romanticized.
+
+Sometimes, it is necessary to feel bad.
+
+So you can feel good to the optimal contrasting level.
+
+But to appreciate this point,
+
+this good,
+
+to make feeling bad worth feeling,
+
+you have to come out of the bad situation.
+
+You cannot passively wait for this feeling to go away,
+
+while having the belief that you are going to suffer anyway.
+
+Even if you try to know more.
+
+To explore more.
+
+Your life.
+
+Your mind.
+
+And your self.
+
+These three are waiting for you to become their active pilot.
+
+Autopilot sounds non-chalant, trendy and low-maintenance.
+
+But you can't deny even in this state that you are condemned to be free.
+
+You have will power.
+
+You are required to take an action.
+
+Actively.
+
+Consciously.
+
+With passion and compassion.
+
+To get out of these spirals.
+
+Or at least trying to.
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

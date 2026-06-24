@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>{{AUTHOR_NAME}} - Writing 05</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 05 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 05</span>
+                </div>
+                
+                <div class="writing-content">
+Reading Kafka was a mess, but healing in its own way.
+
+I've a theory about life:
+
+> "Each passing moment brings a new you, a new understanding of you and the world around you."
+
+When I read Kafka's words, I thought they fit me perfectly. Days passed, lessons learned; I read them again and they made more sense this time.
+
+Then, again, another journey, a new experience, a new interaction and a new relationship, everything became more meaningful.
+
+> "There are times, dearest, when I'm convinced, I'm unfit for any human relationship. "
+
+This is the quote that I experienced like this lately. The more I grow, the more I get involved with someone, the more I overcome my fear of connection, the more I see how unfit I'm.
+
+> "Once I read somewhere that once your start reflecting and meditating, you start finding more negativity within yourself. It's not because meditation and reflection bring negativity; it's because we start noticing ourselves more in both aspects (positive and negative)."
+
+I find my recent experience with the quote shared above aligned with this thought process. The more I try to connect, the more I realise the aspects in which I'm lacking. It's strange, isn't it?
+
+> "That the more we try to become someone, the more we realize how different we are."
+
+I was convinced that I was a safe space for someone. I thought I was available whenever they needed me; I listened and didn't judge. And then they gave me a mirror with a picture painted that seemed different from my perception of myself.
+
+I was distant and cold in their weak moments. I pushed them further whenever they tried to go away. They waited for me to pursue them, and I was distant, giving them space to sit with themselves.
+
+They wanted to sit with me and I was walking on narrow lanes, restraining, providing and dissolving into fog. I thought the fog would let them feel my abundance, without realising it could portray abandonment too.
+
+The darkness of the lanes was a safe space, created by mixing every colour of emotions and feelings. But it was a black hole too, with everything going inward and nothing coming out.
+
+I felt shallow and exhausted, like that fog was in my lungs, yes, that part of me, residing in me and making it difficult for me to breathe or speak.
+
+To tell or whisper that I care about you. To let you know that even when I was gone, I was with you.
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

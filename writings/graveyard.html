@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <script>
+        if (localStorage.getItem('site-theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+    <title>{{AUTHOR_NAME}} - Writing 02</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 02 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 02</span>
+                </div>
+                
+                <div class="writing-content">
+Once I went for a morning walk.
+
+In a graveyard.
+
+I saw a cloth buried inside the soil.
+
+There was a time when it had some presence in it.
+
+Maybe a life.
+
+A being was still there, motionless as a statue.
+
+It didn't laugh or cry or scream or feel shy.
+
+Finally being authentic, just existing as it wanted.
+
+Lifeless, but supposed to exist anyway.
+
+It decayed with time, layer by layer.
+
+It refused to be put together.
+
+Like it was supposed to be throughout its life.
+
+It happily gave up whatever came its way.
+
+To reach its core.
+
+The core had some radiance.
+
+Dispersed in the atmosphere.
+
+And this radiance had pulled me closer to it in the first place.
+
+It became a canvas.
+
+For something not spoken so much.
+
+But felt often.
+
+It displayed hollowness.
+
+Showcasing the emptiness of some folks.
+
+It got eaten by insects.
+
+Like a person exhausted by life affairs.
+
+It showed what the skin was hiding.
+
+That white pure matter.
+
+The purity got dissolved into the soil.
+
+And vanished.
+
+Did it make the soil pure or polluted?
+
+Did this authenticity do any good?
+
+Or was it denied as just another act of pretentiousness?
+
+Did the soil accept it as its extended self?
+
+Or did it abandon it with the consciousness that it had?
+
+God knows what it did to the soil.
+
+The ground might not tell me but I realized something.
+
+I traced its cracks with my fingers.
+
+And knew that I am soil too.
+
+I tried connecting to the ground.
+
+Placing both hands on it.
+
+I tried finding its heartbeat.
+
+But no, it was still.
+
+I placed them on my chest.
+
+And felt it there.
+
+Soo fast that I wondered if it would abandon both soils.
+
+And fly to the sky.
+
+Growing some little white wings.
+
+The answer was there.
+
+Always kept, but untouched.
+
+The purity of the body was being dissolved into my soil.
+
+I felt seen and acknowledged.
+
+Some peace wrapped around my roots.
+
+The body had purified this soil.
+
+While dissolving into nothingness.
+
+The daring nature.
+
+The audacity to be this free.
+
+I felt so jealous.
+
+For some, maybe nothing was there.
+
+But I had seen that colour of the absence.
+
+That was so vivid.
+
+That I wanted to capture it.
+
+Feeling jealous I took a sigh.
+
+Tried waving goodbye.
+
+But I chose otherwise.
+
+As it was against its purpose of expression.
+
+It had let go and so did I.
+
+While walking back towards the crowd of voices.
+
+I was happy that at some point, when my heart would rest.
+
+My body would become limitless.
+
+It will show what it hid throughout the life.
+
+A void.
+
+An absence.
+
+Some traces of existence.
+
+I don't know if somebody would witness it or not.
+
+But one thing for sure.
+
+It will certainly happen.
+
+The solitude that will lead to this form of self expression.
+
+That will be my last act of healing.
+
+I just always knew that solitude would heal me.
+
+And when I'll leave that white cloth behind.
+
+That will be my last betrayal.
+
+On the face of the soil.
+
+It will tell my story to those; who'll stop.
+
+And try to listen to what some voids have to say.
+
+Who can see the absence and colours together.
+
+And who are always fascinated.
+
+By the expressions of the soil.
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

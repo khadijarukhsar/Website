@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>{{AUTHOR_NAME}} - Writing 18</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1><a href="../index.html" class="insert-author-name">Author Name</a></h1>
+            <div class="site-subtitle insert-site-title">A Quiet Space</div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../writings.html" aria-current="page">Writings</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <article>
+                <div class="writing-header">
+                    <h2 class="writing-title">Writing 18 Placeholder Title</h2>
+                    <span class="writing-meta">Entry 18</span>
+                </div>
+                
+                <div class="writing-content">
+I’ve seen people waiting for an apology for closure with someone. I’ve debated how it is necessary for them, as it helps them to move on. But why things are different when it happens practically?
+
+I received that text, I received the apology, years later. I had moved on, apparently; I had just stopped pondering upon it. But then that apology, and I relived those feelings. I saw you were guilty, you wanted to move on, you wanted to make things clear, you wanted to say you made mistakes, you wanted to apologize for all that — but at what cost?
+
+Is this all that truly matters? Is this how things work? You just do something wrong, you spend some years to realize it was wrong, but now as you want to grow, you want to get rid of the weight of what you did, you say sorry — and that’s all? What about the pain that you again stirred into my soul?
+
+Isn't it selfish to mention everything again just because you find it too heavy  to carry on living like that? Without even considering that what the other person might suffer when you’ll mention it.
+
+It’s unfair as it snatches my position from being a victim to someone who must understand that people make mistakes, people grow out of them, and therefore, I should let it go too.
+
+Holding back seems immature and letting go demands too much maturity. But in all this mess, I encounter a situation where roles are opposite. I would be desperate for forgiveness too, I would consider it unfair too that I’ve changed myself therefore I shouldn’t be held responsible for what I did years ago. But then silence prevails with  muffled echoes, You said that I’ve forgotten what you did, but you remember that, and you’re sorry for that.
+
+But how can I tell you that I remember the pain? That I remember what I’ve felt and it brings me back to that darkness again? But I can’t say that I can’t forgive you, because the roles can be reversed anytime. Should I feel sad for the injustice I feel as a victim, or should I feel sad that I had demanded forgiveness too, if I were you.
+
+I know that I am not you, so maybe, I shouldn’t have done that. However, besides this monologue, I’ve questions I can never answer: “What about my pain? What about the misery? “
+
+I may say again that apology is necessary for a closure, but it’s not working for me. At least, for now. What should I do?
+                </div>
+            </article>
+
+            <div id="dynamic-writing-nav" class="writing-nav" aria-label="Writing Navigation">
+                <!-- Javascript will inject Next/Prev links here based on writings-data.js -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> <span class="insert-author-name">Author</span>. All rights reserved.</p>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">Dim</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/writings-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
