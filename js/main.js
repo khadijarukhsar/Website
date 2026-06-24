@@ -316,8 +316,23 @@ function initPage(overrideUrl = null) {
             if (newMain) {
                 const updateDOM = () => {
                     document.body.classList.remove('js-loaded'); // Prevent FOUC during SPA transition
-                    document.querySelector('main').innerHTML = newMain.innerHTML;
+                    
+                    // Add tabindex so we can programmatically focus it for screen readers
+                    newMain.setAttribute('tabindex', '-1');
+                    // Remove default outline when focused via script
+                    newMain.style.outline = 'none';
+                    
+                    document.querySelector('main').replaceWith(newMain);
                     document.title = newTitle;
+                    
+                    // Update Navigation aria-current
+                    document.querySelectorAll('nav a').forEach(navLink => {
+                        navLink.removeAttribute('aria-current');
+                        // Extremely robust matching for the active link
+                        if (navLink.href === url || url.includes(navLink.getAttribute('href'))) {
+                            navLink.setAttribute('aria-current', 'page');
+                        }
+                    });
                     
                     try {
                         if (!isPopState) history.pushState({}, '', url);
@@ -327,6 +342,9 @@ function initPage(overrideUrl = null) {
                     
                     window.scrollTo(0, 0); // scroll to top
                     initPage(url); // pass the new URL explicitly in case pushState failed
+                    
+                    // Shift screen reader focus to the new content
+                    newMain.focus();
 
                     // Track SPA navigation in GoatCounter
                     if (window.goatcounter && window.goatcounter.count) {

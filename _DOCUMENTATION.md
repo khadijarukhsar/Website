@@ -59,15 +59,15 @@ HTML files are the skeleton of the website. If you think of a website as a house
 ### 2. The Content Folder (`writings/`)
 This folder is where your actual art lives.
 
-- **`Your Article Title.html`:** Every single story you write gets its own file here. For example, if someone is reading "Milk and Chocolate", they are looking at a file named exactly `Milk and Chocolate.html`.
-  - *How to update it:* If you ever want to fix a typo in a story, you just open its file, scroll down to the `<div class="writing-content">` section, and edit the text. You don't even need to use HTML tags for paragraphs; just leave a blank line between your paragraphs, and the code I wrote will automatically format it into a beautiful book page for you.
+- **`Your Article Title.html`:** Every single write-up you write gets its own file here. For example, if someone is reading "Milk and Chocolate", they are looking at a file named exactly `Milk and Chocolate.html`.
+  - *How to update it:* If you ever want to fix a typo in a write-up, you just open its file, scroll down to the `<div class="writing-content">` section, and edit the text. You don't even need to use HTML tags for paragraphs; just leave a blank line between your paragraphs, and the code I wrote will automatically format it into a beautiful book page for you.
 
 ### 3. The Design Folder (`css/`)
 If HTML is the wooden frame of the house, CSS is the interior design—the paint, the lighting, and the furniture.
 
 - **`styles.css`:** This single file controls the look of the *entire* website. 
   - *The Colors:* Here is where I defined the warm off-white background (`#ebe9df`) and the soft charcoal text (`#2c2c2c`). 
-  - *The Typography:* It tells the browser to use "Lora" (a classic, novel-like font) for your stories, and "Inter" (a clean, modern font) for your menus.
+  - *The Typography:* It tells the browser to use "Lora" (a classic, novel-like font) for your write-ups, and "Inter" (a clean, modern font) for your menus.
   - *The Magic Trick:* If you look inside this file, you'll see a section starting with `@media (max-width: 600px)`. That is the "Responsive" code. It tells the website: "If the screen is smaller than a phone, instantly delete the margins and the shadows so the text fits perfectly in Khadija's hand."
   - *Dark Mode:* At the bottom, there are rules that change the colors to dark grey when the "Dim" button is clicked. 
 
@@ -76,7 +76,7 @@ Javascript (JS) is the electricity of the house. It makes things move, remember,
 
 - **`config.js` (The Master Switch):** I created this file just for you. It contains the text for the birthday popup. 
 - **`writings-data.js` (The Ledger):** This is the master list of all your writings. 
-  - *Why is it important?* Instead of you having to manually update the "Next" and "Previous" buttons on 20 different pages, you just add the title of your new story to this file. My code reads this ledger and automatically hooks up all the navigation buttons across the entire website for you!
+  - *Why is it important?* Instead of you having to manually update the "Next" and "Previous" buttons on 20 different pages, you just add the title of your new write-up to this file. The code reads this ledger and automatically hooks up all the navigation buttons across the entire website for you!
 - **`main.js` (The Engine Room):** You probably won't ever need to touch this file, but since you're learning to code, it’s an absolute goldmine to study. It contains the logic for the Seamless Router (which lets you change pages without the screen flashing), the memory for Dark Mode (so it remembers your choice), and that cool Typewriter animation engine.
 
 ### 5. The Analytics (GoatCounter)
@@ -86,25 +86,54 @@ Because I wanted you to see if people are actually reading your work, but I abso
 
 ---
 
-## How to Add a New Story
+## How to Add a New Write-up
 
-I made sure that adding a new story is as painless as possible. When you write your next masterpiece, here is exactly what you do:
+I made sure that adding a new write-up is as painless as possible. When you write your next masterpiece, here is exactly what you do:
 
 **Step 1: Create the Page**
-Go to the `writings/` folder. Copy an existing file (like `graveyard.html`) and paste it. Rename the new file to the title of your new story (Example: `My New Story.html`).
+Go to the `writings/` folder. Copy an existing file (like `graveyard.html`) and paste it. Rename the new file to the title of your new write-up (Example: `My New Write-up.html`).
 
 **Step 2: Paste Your Words**
-Open `My New Story.html`. Scroll down to where the text is, delete the old story, and paste your new raw text. Again, no HTML `<p>` tags needed. Just normal text with blank lines between paragraphs. Save the file.
+Open `My New Write-up.html`. Scroll down to where the text is, delete the old write-up, and paste your new raw text. Again, no HTML `<p>` tags needed. Just normal text with blank lines between paragraphs. Save the file.
 
 **Step 3: Tell the Ledger**
 Open `js/writings-data.js`. Go to the very bottom of the list. Add a comma to the end of the last entry, hit enter, and type:
-`{ file: "My New Story.html", title: "My New Story" }`
+`{ file: "My New Write-up.html", title: "My New Write-up" }`
 
-Save it. That’s literally it! The website will instantly add your new story to the Home Page, the Writings library, and automatically connect the "Next" buttons perfectly. It will also use its Javascript brain to automatically count the words and calculate the reading time for you!
+Save it. That’s literally it! The website will instantly add your new write-up to the Home Page, the Writings library, and automatically connect the "Next" buttons perfectly. It will also use its Javascript brain to automatically count the words and calculate the reading time for you!
+
+*(Fun Tip: Want to reorder your write-ups? Just cut and paste the lines in `js/writings-data.js` to change their order! The website will automatically update the library list and rearrange all the Next/Previous buttons to match your new order.)*
+
+**Step 4: Publish to the Internet**
+Right now, your new write-up only exists on your computer. To push it out to the live website, open your terminal (command prompt), make sure you are in the project folder, and type these three commands:
+1. `git add .` (This tells Git to grab your new files)
+2. `git commit -m "Added my new write-up"` (This saves the changes with a little note)
+3. `git push` (This uploads everything to GitHub, and your live site will update in about 60 seconds!)
 
 ---
 
-I hope you love this space as much as I loved building it for you. It’s yours now to ride. Break it as much as you possiblly can, learn from it, and fill it with your new creations. I'll be your most regular, and loyal reader.
+## How to Update Existing Pages
+
+What if you want to change your bio on the About page, or edit the introduction on the Home page? It's even easier than adding a new write-up!
+1. Open the file you want to change (like `about.html`).
+2. Scroll down until you see the text you want to edit.
+3. Simply delete the old text, type your new words, and save the file.
+4. Run the three Git commands (`git add .`, `git commit -m "Updated bio"`, `git push`) to publish your changes!
+
+---
+
+## What You Can Build Next 🚀
+
+Once you get comfortable exploring the HTML, CSS, and Javascript, here are some really cool features you could try building yourself as a learning project!
+
+1. **A Contact Page:** Create a `contact.html` page so readers can send you a message. You can link it in the navigation bar! *(Hint: Look into free services like Formspree to make the form work without needing a database).*
+2. **A "Tags" System:** Add a `tag` property (like "Poetry" or "Reflection") to your ledger, and try to make the Javascript display it!
+3. **An Image Gallery:** Try adding a `photos.html` page where you can upload and display pictures alongside your words.
+4. **Custom Themes:** Right now there is a Light mode and a Dark mode. Try creating a "Sepia" or "Coffee" mode in `css/styles.css`!
+
+---
+
+*Built with love. Keep writing.* I'll be your most regular, and loyal reader.
 
 Happy 21st Birthday,
 With lots of love,
