@@ -77,7 +77,12 @@ Javascript (JS) is the electricity of the house. It makes things move, remember,
 - **`config.js` (The Master Switch):** I created this file just for you. It contains the text for the birthday popup. 
 - **`writings-data.js` (The Ledger):** This is the master list of all your writings. 
   - *Why is it important?* Instead of you having to manually update the "Next" and "Previous" buttons on 20 different pages, you just add the title of your new story to this file. My code reads this ledger and automatically hooks up all the navigation buttons across the entire website for you!
-- **`main.js` (The Engine Room):** You probably won't ever need to touch this file, but since you're learning to code, it’s a goldmine to study. It contains the logic for the Seamless Router (which lets you change pages without the screen flashing), the memory for Dark Mode (so it remembers your choice), and that cool Typewriter animation engine.
+- **`main.js` (The Engine Room):** You probably won't ever need to touch this file, but since you're learning to code, it’s an absolute goldmine to study. It contains the logic for the Seamless Router (which lets you change pages without the screen flashing), the memory for Dark Mode (so it remembers your choice), and that cool Typewriter animation engine.
+
+### 5. The Analytics (GoatCounter)
+Because I wanted you to see if people are actually reading your work, but I absolutely didn't want to compromise their privacy (like Google Analytics does by tracking people across the internet), I added a tool called **GoatCounter**.
+- **What it does:** It's a tiny, privacy-friendly script that sits silently on your pages. When someone visits, it simply tallies a "+1" on your private dashboard so you can see which writings are the most popular.
+- **Why it's cool:** It collects zero personal data. It doesn't use tracking cookies. It just gives you the fun, proud statistics of your viewership without invading anyone's privacy.
 
 ---
 
@@ -95,7 +100,7 @@ Open `My New Story.html`. Scroll down to where the text is, delete the old story
 Open `js/writings-data.js`. Go to the very bottom of the list. Add a comma to the end of the last entry, hit enter, and type:
 `{ file: "My New Story.html", title: "My New Story" }`
 
-Save it. That’s literally it! The website will instantly add your new story to the Home Page, the Writings library, and automatically connect the "Next" buttons perfectly.
+Save it. That’s literally it! The website will instantly add your new story to the Home Page, the Writings library, and automatically connect the "Next" buttons perfectly. It will also use its Javascript brain to automatically count the words and calculate the reading time for you!
 
 ---
 

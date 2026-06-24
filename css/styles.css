@@ -215,6 +215,17 @@ a:hover, a:focus {
     margin-top: 2rem;
 }
 
+.archive-stats {
+    text-align: center;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed var(--border-color);
+    letter-spacing: 0.05em;
+}
+
 /* Individual Writing Page */
 .writing-header {
     text-align: center;
@@ -454,8 +465,10 @@ footer {
 
 /* Dark Theme overrides */
 html.dark-theme body,
-body.dark-theme {
+body.dark-theme,
+html.dark-theme {
     background-color: #1a1a1a;
+    color-scheme: dark;
     --bg-color: #262626;
     --text-color: #e0e0e0;
     --link-color: #a0a0a0;

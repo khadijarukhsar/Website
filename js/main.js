@@ -91,13 +91,19 @@ function initPage(overrideUrl = null) {
     const allWritingsContainer = document.getElementById('full-writing-list');
     if (allWritingsContainer && typeof WRITINGS_LIST !== 'undefined') {
         allWritingsContainer.innerHTML = '';
+        
+        // Add Total Archive Banner
+        const totalWritings = WRITINGS_LIST.length;
+        const statsBanner = document.createElement('div');
+        statsBanner.className = 'archive-stats';
+        statsBanner.innerHTML = `Total Archive: ${totalWritings} Published Writings`;
+        allWritingsContainer.appendChild(statsBanner);
+
         WRITINGS_LIST.forEach(writing => {
-            const metaText = writing.meta || '';
             const li = document.createElement('li');
             li.innerHTML = `
                 <a href="writings/${writing.file}">
                     <span class="title">${writing.title}</span>
-                    <span class="meta">${metaText}</span>
                 </a>
             `;
             allWritingsContainer.appendChild(li);
@@ -146,16 +152,32 @@ function initPage(overrideUrl = null) {
             const pageMetaEl = document.querySelector('.writing-meta');
             if (pageTitleEl) pageTitleEl.textContent = WRITINGS_LIST[currentIndex].title;
 
-            // Calculate Reading Time
-            const contentDiv = document.querySelector('.writing-content');
-            let readingTime = 1;
-            if (contentDiv) {
-                const fullText = contentDiv.textContent.trim();
-                const wordCount = fullText.split(/\s+/).filter(word => word.length > 0).length;
-                readingTime = Math.max(1, Math.ceil(wordCount / 200));
+            if (pageMetaEl) {
+                const contentDiv = document.querySelector('.writing-content');
+                let wordCount = 0;
+                let readingTime = 1;
+                let paragraphCount = 0;
+                let richness = 0;
+                
+                if (contentDiv) {
+                    const fullText = contentDiv.textContent.trim();
+                    const wordsArray = fullText.split(/\s+/).filter(word => word.length > 0);
+                    wordCount = wordsArray.length;
+                    readingTime = Math.max(1, Math.ceil(wordCount / 200));
+                    
+                    // Paragraphs (splitting by double newline)
+                    paragraphCount = fullText.split(/\n\s*\n/).filter(p => p.trim() !== '').length;
+                    
+                    // Vocabulary Richness (Unique words)
+                    // Remove punctuation and lowercase everything for accurate matching
+                    const cleanWordsArray = fullText.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/).filter(w => w.length > 0);
+                    const uniqueWords = new Set(cleanWordsArray).size;
+                    richness = wordCount > 0 ? Math.round((uniqueWords / cleanWordsArray.length) * 100) : 0;
+                }
+                
+                // Construct the highly detailed automated stats string
+                pageMetaEl.innerHTML = `${readingTime} min read &nbsp;&bull;&nbsp; ${paragraphCount} paragraphs &nbsp;&bull;&nbsp; ${wordCount.toLocaleString()} words (${richness}% unique)`;
             }
-
-            if (pageMetaEl) pageMetaEl.textContent = `A ${readingTime}-minute reflection`;
             document.title = `${SITE_CONFIG.authorName} - ${WRITINGS_LIST[currentIndex].title}`;
         } else {
             // Absolute bulletproof fallback: if the file somehow isn't in WRITINGS_LIST, 
@@ -236,6 +258,13 @@ function initPage(overrideUrl = null) {
             }
         }
     }
+    
+    // Set Current Year centrally
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
     document.body.classList.add('js-loaded');
 }
 
@@ -328,6 +357,9 @@ function initPage(overrideUrl = null) {
         const href = link.getAttribute('href');
         // Ignore external links or empty links
         if (!href || href.startsWith('http') || href.startsWith('#')) return;
+
+        // Ignore links meant to open in a new tab
+        if (link.getAttribute('target') === '_blank') return;
 
         // Ensure we don't intercept middle-clicks or ctrl-clicks
         if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
