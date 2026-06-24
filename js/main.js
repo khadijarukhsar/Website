@@ -74,7 +74,11 @@ function initPage(overrideUrl = null) {
             el.textContent = SITE_CONFIG.siteTitle;
         });
 
-        document.title = document.title.replace("{{AUTHOR_NAME}}", SITE_CONFIG.authorName);
+        if (document.title.includes('{{AUTHOR_NAME}}')) {
+            document.title = document.title.replace("{{AUTHOR_NAME}}", SITE_CONFIG.authorName);
+        } else if (!document.title.startsWith(SITE_CONFIG.authorName)) {
+            document.title = `${SITE_CONFIG.authorName} - ${document.title}`;
+        }
     }
 
     // 1. If we are on index.html, update the Begin Reading link
