@@ -186,17 +186,17 @@ function initPage(overrideUrl = null) {
                 const bottomStats = document.createElement('div');
                 bottomStats.className = 'geeky-stats';
                 bottomStats.innerHTML = `
-                    <div class="stat-item">
-                        <span class="stat-value">${wordCount.toLocaleString()}</span>
-                        <span class="stat-label">Words</span>
+                    <div class="stat-item" aria-label="${wordCount.toLocaleString()} Words.">
+                        <span class="stat-value" aria-hidden="true">${wordCount.toLocaleString()}</span>
+                        <span class="stat-label" aria-hidden="true">Words</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-value">${paragraphCount}</span>
-                        <span class="stat-label">Paragraphs</span>
+                    <div class="stat-item" aria-label="${paragraphCount} Paragraphs.">
+                        <span class="stat-value" aria-hidden="true">${paragraphCount}</span>
+                        <span class="stat-label" aria-hidden="true">Paragraphs</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-value">${richness}%</span>
-                        <span class="stat-label">Vocabulary</span>
+                    <div class="stat-item" aria-label="${richness}% Unique Vocabulary.">
+                        <span class="stat-value" aria-hidden="true">${richness}%</span>
+                        <span class="stat-label" aria-hidden="true">Vocabulary</span>
                     </div>
                 `;
                 
