@@ -175,8 +175,35 @@ function initPage(overrideUrl = null) {
                     richness = wordCount > 0 ? Math.round((uniqueWords / cleanWordsArray.length) * 100) : 0;
                 }
                 
-                // Construct the highly detailed automated stats string
-                pageMetaEl.innerHTML = `${readingTime} min read &nbsp;&bull;&nbsp; ${paragraphCount} paragraphs &nbsp;&bull;&nbsp; ${wordCount.toLocaleString()} words (${richness}% unique)`;
+                // Construct top meta
+                pageMetaEl.innerHTML = `A ${readingTime}-minute read.`;
+                
+                // Construct bottom stats
+                // First, remove any existing bottom stats to prevent duplicates on SPA navigation
+                const existingStats = document.querySelector('.geeky-stats');
+                if (existingStats) existingStats.remove();
+                
+                const bottomStats = document.createElement('div');
+                bottomStats.className = 'geeky-stats';
+                bottomStats.innerHTML = `
+                    <div class="stat-item">
+                        <span class="stat-value">${wordCount.toLocaleString()}</span>
+                        <span class="stat-label">Words</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">${paragraphCount}</span>
+                        <span class="stat-label">Paragraphs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">${richness}%</span>
+                        <span class="stat-label">Vocabulary</span>
+                    </div>
+                `;
+                
+                // Insert after writing-content
+                if (contentDiv && contentDiv.parentNode) {
+                    contentDiv.parentNode.insertBefore(bottomStats, contentDiv.nextSibling);
+                }
             }
             document.title = `${SITE_CONFIG.authorName} - ${WRITINGS_LIST[currentIndex].title}`;
         } else {
