@@ -299,25 +299,7 @@ function initPage(overrideUrl = null) {
 // SPA Router & Global Events (Run Once)
 // -----------------------------------------
 (function bootstrap() {
-    // Welcome Gift Popup Logic
-    const modal = document.getElementById('note-modal');
-    if (modal && typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.friendNoteBody) {
-        if (!localStorage.getItem('hasSeenGiftPopup')) {
-            document.getElementById('modal-title').textContent = SITE_CONFIG.friendNoteTitle;
-            document.getElementById('modal-body').textContent = SITE_CONFIG.friendNoteBody;
-            
-            // Short delay to allow CSS transitions to initialize
-            setTimeout(() => modal.classList.add('active'), 200);
-            
-            document.getElementById('close-modal').addEventListener('click', () => {
-                modal.classList.remove('active');
-                localStorage.setItem('hasSeenGiftPopup', 'true');
-            });
-        } else {
-            // Remove from DOM entirely if already seen to keep it clean
-            modal.remove();
-        }
-    }
+
 
     // Inject GoatCounter Analytics dynamically on first load
     if (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.goatCounterUrl) {
@@ -459,6 +441,12 @@ function initPage(overrideUrl = null) {
             themeToggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
             
             localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+
+            // Dynamically update mobile browser URL bar color
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', isDark ? '#1a1a1a' : '#ebe9df');
+            }
         });
     }
 

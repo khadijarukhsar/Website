@@ -52,7 +52,7 @@ When you open the project folder, You'll see the following:
 ### 1. The Main Pages (`.html` files)
 HTML files are the skeleton of the website. If you think of a website as a house, HTML is the wooden frame. It defines where the walls and the doors are.
 
-- **`index.html` (The Front Door):** This is your Home Page. It contains your poetic introduction. It’s also where I hid that special "Welcome Gift" popup that only appears the very first time someone visits. 
+- **`index.html` (The Front Door):** This is your Home Page. It contains your poetic introduction.
 - **`writings.html` (The Library):** This is the index page. It displays a chronological list of every single writing you’ve published.
 - **`about.html` (The Living Room):** This is where you introduce yourself, featuring the beautiful words you wrote about yourself once.
 
